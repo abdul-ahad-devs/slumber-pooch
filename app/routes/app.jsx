@@ -1,10 +1,12 @@
 import { json } from "@remix-run/node";
-import { Link, Outlet, useLoaderData, useRouteError } from "@remix-run/react";
+import { Outlet, useLoaderData, useRouteError } from "@remix-run/react";
 import polarisStyles from "@shopify/polaris/build/esm/styles.css";
 import { boundary } from "@shopify/shopify-app-remix/server";
 import { AppProvider } from "@shopify/shopify-app-remix/react";
 
 import { authenticate } from "../shopify.server";
+import AppHeader from "~/components/header/AppHeader";
+import AppFooter from "~/components/footer/AppFooter";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
@@ -19,13 +21,11 @@ export default function App() {
 
   return (
     <AppProvider isEmbeddedApp={false} apiKey={apiKey}>
-      <ui-nav-menu>
-        <Link to="/app" rel="home">
-          Home
-        </Link>
-        <Link to="/app/additional">Additional page</Link>
-      </ui-nav-menu>
-      <Outlet />
+      <AppHeader />
+      <div className="min-h-[100%]">
+        <Outlet />
+      </div>
+      <AppFooter />
     </AppProvider>
   );
 }
