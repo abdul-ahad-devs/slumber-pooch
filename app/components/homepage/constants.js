@@ -42,3 +42,30 @@ export const products = [
     buttonText: "BUY ONE NOW",
   },
 ];
+
+export const productFeaturesList = [
+  {
+    id: 1,
+    name: "A dog bed that they want to stay on ",
+  },
+  {
+    id: 2,
+    name: "Use Anywhere",
+  },
+  {
+    id: 3,
+    name: "Protects Furniture",
+  },
+  {
+    id: 4,
+    name: "Calming blanket and cave",
+  },
+  {
+    id: 5,
+    name: "Big Enough for big dogs",
+  },
+  {
+    id: 6,
+    name: "Warranty",
+  },
+];
