@@ -26,7 +26,7 @@ const HomepageBanner7 = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-1 bg-[red]">
+        <div className="flex flex-1">
           <img src={bannerImg} className="w-full h-full" />
         </div>
       </div>
