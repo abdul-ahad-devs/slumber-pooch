@@ -5,14 +5,15 @@ import {
 } from "./appHeaderMenu";
 import { Link } from "@remix-run/react";
 import IconButton from "../buttons/IconButton";
+import appLogo from "../../assets/images/app-logo.svg";
 
 const AppHeader = () => {
   return (
-    <div className="flex flex-1 bg-white w-screen h-[4rem] px-4 py-2">
+    <div className="flex flex-1 bg-white items-center w-screen h-[4rem] px-4 py-2">
       {/* app logo */}
-      <div className="text-darkOrange font-bold capitalize text-3xl items-center flex flex-1">
-        Slumber Pooch Logo
-      </div>
+      {/* <div> */}
+      <img src={appLogo} className="w-[10rem] h-[5rem]" />
+      {/* </div> */}
       {/* menu container */}
       <div className="flex flex-1 justify-center items-center">
         {appHeaderMenu.map((menu) => (

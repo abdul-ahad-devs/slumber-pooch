@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { appFooterMenu, appFooterSocialIcons } from "./appFooterMenu";
 import IconButton from "../buttons/IconButton";
+import appLogo from "../../assets/images/app-logo.svg";
 
 const AppFooter = () => {
   return (
@@ -16,9 +17,8 @@ const AppFooter = () => {
             {menu.name}
           </Link>
         ))}
-        <h1 className="text-3xl text-darkOrange font-bold ">
-          Slumber Pooch Logo
-        </h1>
+        {/* app logo */}
+        <img src={appLogo} className="w-[10rem] h-[5rem]" />
       </div>
 
       <div className="flex flex-1 justify-around items-end flex-col ">
